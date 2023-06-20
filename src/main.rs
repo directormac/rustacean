@@ -1,7 +1,14 @@
+mod blocks;
 mod funcs;
+mod pattern_matching;
+mod tuples;
+mod variables;
 
 fn main() {
-    println!("Hello, world!"); // This is a macrom, its not as easy at it looks
+    variables::variable_assignments(); //variables.rs
+    tuples::tup_types();
+    blocks::blocks();
+    pattern_matching::matchy_matchy();
 
     // Cheap knock off of println macro
     let _ = funcs::withargs::printme("Hello, Cheap World!\n"); // Go to the definition

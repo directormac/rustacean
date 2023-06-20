@@ -1,12 +1,3 @@
-### Rust personal reference
-
----
-
-## Variables assignments and all its jazz
-
-> Basic variable assignments and syntax sugar
-
-```rust
 // Everything lives inside a function!!!! except these 2, they are special
 // const and static are special they are immutable and memory was allocated even before the main function
 // They are global!
@@ -17,7 +8,7 @@ const WASTE_OF_MEMORY: &str = "Hello, Variables";
 // Yes this is how we name things now. No camelCase or PascalCase
 pub fn variable_assignments() {
     let x = 73; // Type is infered
-    let typed_x: i32 = x; // declared the type using the :
+    let typed_x: i32 = x - 73 + 2 * 73 / 2; // declared the type using the :
     let hello = "Hello, ";
     let world = String::from("World!");
 
@@ -30,15 +21,17 @@ pub fn variable_assignments() {
     let awesome_pi = (AWESOME_NUMBER as f32) + NOT_PI;
 
     println!("Hello World");
+    print!("{WASTE_OF_MEMORY}");
+    // Statements can go on multiple lines they are ended with ;
     println!(
-        "This is the variable.rs\n
+        // inline comments wont affect the coode
+        "This is the variable.rs\n 
         x should go here {} \n
         tpyed_x is the same as x {} \n
         _x wont warn about being unused because of _ \n
         an str  and String {hello} {world} \n
-        and now the awesome_pi {}
-        ",
+        and now the awesome_pi {} \n
+        ", // But you cannot do an inline comment inside double quotes
         x, typed_x, awesome_pi
-    )
+    ); // The statement ends here
 }
-```
